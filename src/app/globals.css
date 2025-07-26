@@ -1,3 +1,16 @@
 @import "tailwindcss";
 
-
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 30%) !important;
+    width: 25px !important;
+    height: 25px !important;
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    color: gray !important;
+}

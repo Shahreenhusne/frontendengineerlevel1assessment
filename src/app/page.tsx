@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import IELTSPage from "@/components/IELTSPage";
-import Image from "next/image";
+import InstructorSection from "@/components/InstructorSection"
+import CourseLayoutSection from "@/components/CourseLayoutSection"
+
 
 export default async function Home() {
 
@@ -15,9 +16,41 @@ export default async function Home() {
 
   return (
    <>
-  <main>
-     <Hero title={data.title} description={data.description} />
+   
+   <div>
+    <Hero title={data.title} description={data.description} media={data.media} cta_text= {data.cta_text} checklist= {data.checklist}/>
+     <main className="container flex flex-col gap-4 md:flex-row md:gap-10">
+      <section className="order-2 flex-1 md:order-1 md:max-w-[calc(100%_-_348px)] lg:max-w-[calc(100%_-_448px)] m-5">
+          <div>
+            <div className="sticky top-[65px] z-20 hidden bg-white md:block">
+              {/* Navigation Carousel */}
+            </div>
+            
+            <div className="pt-[140px] -mt-[140px]">
+              <InstructorSection sections={data.sections}/>
+              <CourseLayoutSection feature={data.sections}/>
+        
+              {/* Add other sections here */}
+            </div>
+          </div>
+        </section>
+      
+      {/* Sidebar Section */}
+      <section className="w-full md:max-w-[330px] lg:max-w-[400px] order-2 bg-white hidden md:block">
+        {/* Sidebar content */}
+      </section>
     </main>
+  
+    </div>
+
    </>
   );
 }
+
+
+
+
+
+
+
+

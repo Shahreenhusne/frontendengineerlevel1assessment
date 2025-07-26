@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="bg-white shadow sticky top-0 min-w-full overflow-clip">
+    <div className="bg-white shadow z-50 fixed  top-0 min-w-full overflow-hidden">
         {/* Top Row: Mobile and Desktop shared */}
       <div className="flex items-center justify-between px-4 py-3 md:py-4">
         {/* Left: Logo and Hamburger (mobile only) */}
