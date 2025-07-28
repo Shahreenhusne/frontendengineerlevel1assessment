@@ -18,7 +18,7 @@ export default function Header() {
           </button>
 
           {/* Logo */}
-          <img src="/logo.svg" alt="Logo" className="h-6 w-auto" />
+          <img src="/10mslogo.png" alt="Logo" className="h-6 w-auto" />
         </div>
 
         {/* Center: Search - desktop only */}
