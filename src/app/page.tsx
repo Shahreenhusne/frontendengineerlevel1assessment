@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import InstructorSection from "@/components/InstructorSection"
 import CourseLayoutSection from "@/components/CourseLayoutSection"
+import LearnByCourseSection from "@/components/LearnByCourse";
+import ExclusiveFeatureSection from "@/components/ExclusiveFeature";
 
 
 export default async function Home() {
@@ -29,6 +31,8 @@ export default async function Home() {
             <div className="pt-[140px] -mt-[140px]">
               <InstructorSection sections={data.sections}/>
               <CourseLayoutSection feature={data.sections}/>
+               <LearnByCourseSection pointer={data.sections}/>
+                <ExclusiveFeatureSection feature_explanations={data.sections}/>
         
               {/* Add other sections here */}
             </div>

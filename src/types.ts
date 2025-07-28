@@ -41,6 +41,53 @@ type FeatureValues = {
   title : string
 }
 
+type PointerValues = {
+   color: string,
+    icon: string,
+    id:string,
+    text: string
+}
+type AboutValues = {
+  description : string
+   icon: string
+   id: string
+   title: string
+}
+
+type FeatureExplanationsValue = {
+  checklist: string [],
+  file_type: string,
+  file_url: string,
+  id: string,
+  title: string,
+  video_thumbnail: string,
+}
+
+type FeatureExplanationsValueArray = {
+  type:  string,
+  name:  string,
+  description: string,
+  bg_color:string,
+  order_idx: number
+  values: FeatureExplanationsValue []
+}
+type AboutArray = {
+  type: string,
+  name: string,
+  description: string,
+  bg_color: string,
+  order_idx: number,
+  values: AboutValues []
+}
+
+type PointerArray = {
+  type: string,
+  name: string,
+  description: string,
+  bg_color:string,
+  order_idx: number,
+  values : PointerValues []
+}
 type FeatureArray ={
    type: string,
   name: string ,
@@ -50,7 +97,10 @@ type FeatureArray ={
   values: FeatureValues[]
 }
 
-export type Feature = FeatureArray[];
+export type FeatureExplanations = FeatureExplanationsValueArray [] ; //Course Exclusive Feature
+export type About = AboutArray [] ; //Course details
+export type Pointer = PointerArray [] ; //What you will learn by doing the course
+export type Feature = FeatureArray[];    //How the course is laid out
 
 export type Section = SectionArray []; 
 
